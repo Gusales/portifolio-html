@@ -1,0 +1,48 @@
+form.form-contato {
+    display: grid;
+    margin-top: 1.25rem;
+    gap: .5rem;
+}
+
+form.form-contato h2 {
+    text-align: center;
+}
+
+form.form-contato input,
+form.form-contato textarea {
+    background: var(--suface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 24px;
+
+    transition: background 0.4s;
+}
+
+form.form-contato textarea {
+    height: 125px;
+    resize: none;
+}
+
+form.form-contato button.submit-btn {
+    background-color: var(--suface-color);
+    outline: 2px solid var(--stroke-color);
+    border: 0;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 400ms;
+    border-radius: 4px;
+}
+
+form.form-contato button.submit-btn:hover {
+    background-color: var(--suface-color-hover);
+}

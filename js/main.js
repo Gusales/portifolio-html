@@ -3,19 +3,11 @@ function toogleTheme() {
   body.classList.toggle('light');
 }
 
-function showAccordion(accordionId) {
-  const accordionDivs = Array.from(document.querySelectorAll(".accordion-pannel"))
-
-  if (accordionDivs.length > 0) {
-    const accordionDiv = accordionDivs[accordionId - 1]
-    console.log(accordionDiv)
-
-    if (accordionDiv.style.maxHeight) {
-      accordionDiv.style.maxHeight = null;
-    } else {
-      accordionDiv.style.maxHeight = (accordionDiv.scrollHeight + 32) + "px";
-    }
-
-    accordionDiv.classList.toggle("active")
-  }
+function entrarEmContato(event) {
+  event.preventDefault()
+  const name = document.getElementById('input-name').value
+  const email = document.getElementById('input-email').value
+  alert(`Olá ${name}, entrarei em contato contigo pelo e-mail ${email}`)
 }
+
+document.querySelector('form')?.addEventListener('submit', entrarEmContato)
